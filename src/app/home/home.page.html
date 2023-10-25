@@ -5,16 +5,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="ion-padding">
-    <label for="nome">Digite o seu nome: </label>
-    <input id="nome" type="text" [(ngModel)]="nome"
-      />
-  </div>
-  <div class="ion-padding">
-    <button type="button" (click)="clickNome()">OK</button>
-    <button type="button" (click)="limpar()">Limpar</button>
-  </div>
-  <p class="ion-padding">
-    {{mensagem}}
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-input
+        label="Digite o seu nome:"
+        labelPlacement="floating"
+        placeholder="Informe o seu nome"
+        [(ngModel)]="nome"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button
+        size="small"
+        (click)="clickNome()"
+        >OK</ion-button
+      >
+      <ion-button
+        size="small"
+        fill="outline"
+        (click)="limpar()"
+        >Limpar</ion-button
+      >
+    </ion-item>
+    <ion-item *ngIf="mensagem">
+      <ion-text color="primary">{{mensagem}}</ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>
