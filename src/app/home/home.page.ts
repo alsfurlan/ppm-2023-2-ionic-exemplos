@@ -7,20 +7,25 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   mensagem = 'Nenhum oi';
-  nome: string = 'Maria';
+  nomePadrao: string = 'Maria';
 
   constructor() {}
 
-  clickOk() {
-    if (this.nome) {
-      this.mensagem = `Hello world, ${this.nome}!`;
+  clickOk(nome: HTMLInputElement) {
+    console.log(nome);
+    if (nome) {
+      this.mensagem = `Hello world, ${nome.value.trim()}!`;
     } else {
       this.mensagem = '';
     }
   }
 
-  changeNome(event: any) {
-    console.log(event);
-    this.nome = event.target.value.trim();
+  clickNome(nome: string) {
+    console.log(nome);
+    if (nome) {
+      this.mensagem = `Hello world, ${nome.trim()}!`;
+    } else {
+      this.mensagem = '';
+    }
   }
 }

@@ -7,11 +7,11 @@
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
     <label for="nome">Digite o seu nome: </label>
-    <input id="nome" type="text" [value]="nome"
-      (change)="changeNome($event)"/>
+    <input #nome id="nome" type="text" [value]="nomePadrao"
+      />
   </div>
   <div class="ion-padding">
-    <button type="button" (click)="clickOk()">OK</button>
+    <button type="button" (click)="clickNome(nome.value)">OK</button>
   </div>
   <p class="ion-padding">
     {{mensagem}}
