@@ -28,4 +28,8 @@ export class HomePage {
       this.mensagem = '';
     }
   }
+
+  limpar(){
+    this.nomePadrao = '';
+  }
 }
