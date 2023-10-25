@@ -7,11 +7,11 @@
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
     <label for="nome">Digite o seu nome: </label>
-    <input #nome id="nome" type="text" [value]="nomePadrao"
+    <input id="nome" type="text" [(ngModel)]="nome"
       />
   </div>
   <div class="ion-padding">
-    <button type="button" (click)="clickNome(nome.value)">OK</button>
+    <button type="button" (click)="clickNome()">OK</button>
     <button type="button" (click)="limpar()">Limpar</button>
   </div>
   <p class="ion-padding">

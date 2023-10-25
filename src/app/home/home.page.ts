@@ -7,29 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   mensagem = 'Nenhum oi';
-  nomePadrao: string = 'Maria';
+  nome: string = 'Maria';
 
   constructor() {}
 
-  clickOk(nome: HTMLInputElement) {
-    console.log(nome);
-    if (nome) {
-      this.mensagem = `Hello world, ${nome.value.trim()}!`;
-    } else {
-      this.mensagem = '';
-    }
+  clickNome() {
+    this.mensagem = this.nome
+      ? `Hello world, ${this.nome.trim()}!`
+      : '';
   }
 
-  clickNome(nome: string) {
-    console.log(nome);
-    if (nome) {
-      this.mensagem = `Hello world, ${nome.trim()}!`;
-    } else {
-      this.mensagem = '';
-    }
-  }
-
-  limpar(){
-    this.nomePadrao = '';
+  limpar() {
+    this.nome = '';
+    this.mensagem = '';
   }
 }
