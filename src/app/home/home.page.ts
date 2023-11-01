@@ -6,19 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  mensagem = '';
-  nome: string = '';
-
-  constructor() {}
-
-  clickNome() {
-    this.mensagem = this.nome
-      ? `Hello world, ${this.nome.trim()}!`
-      : '';
-  }
-
-  limpar() {
-    this.nome = '';
-    this.mensagem = '';
-  }
+ 
 }

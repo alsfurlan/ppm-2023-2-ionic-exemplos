@@ -1,0 +1,27 @@
+
+<ion-list>
+  <ion-item>
+    <ion-input
+      label="Digite o seu nome:"
+      labelPlacement="floating"
+      placeholder="Informe o seu nome"
+      [(ngModel)]="nome"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button
+      size="small"
+      (click)="clickNome()"
+      >OK</ion-button
+    >
+    <ion-button
+      size="small"
+      fill="outline"
+      (click)="limpar()"
+      >Limpar</ion-button
+    >
+  </ion-item>
+  <ion-item *ngIf="mensagem">
+    <ion-text color="primary">{{mensagem}}</ion-text>
+  </ion-item>
+</ion-list>
