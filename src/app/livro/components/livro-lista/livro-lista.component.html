@@ -1,0 +1,10 @@
+<ion-list>
+  <ion-list-header>
+    Livros
+  </ion-list-header>
+  <ion-item *ngFor="let livro of livros">
+    <ion-text [color]="livro.cor">
+      <strong>{{livro.titulo}}</strong> - <em>{{livro.autor}}</em>
+    </ion-text>
+  </ion-item>
+</ion-list>
