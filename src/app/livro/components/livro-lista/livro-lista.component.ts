@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LivroInterface } from "../../types/livro.interface";
 
 @Component({
   selector: 'app-livro-lista',
@@ -6,7 +7,7 @@ import { Component } from "@angular/core";
   styleUrls: ['./livro-lista.component.scss']
 })
 export class LivroListaComponent {
-  livros: any[] = [
+  livros: LivroInterface[] = [
     {
       titulo: 'JavaScript: O guia definitivo',
       autor: 'David Flanagan',
