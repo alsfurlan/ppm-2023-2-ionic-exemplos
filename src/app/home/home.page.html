@@ -1,11 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title> Home Page </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <app-hello-world></app-hello-world>
-  <hr />
-  <app-livro-lista></app-livro-lista>
-</ion-content>
+<ion-list>
+  <ion-list-header>Componentes</ion-list-header>
+  <ion-item>
+    <a [routerLink]="['../hello-world']">
+      Hello world
+    </a>
+  </ion-item>
+  <ion-item>
+    <a [routerLink]="['../livros']">Livros</a>
+  </ion-item>
+</ion-list>
